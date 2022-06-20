@@ -12,52 +12,46 @@ import { Button } from 'Atoms/Button';
 import { Container } from 'Atoms/Container';
 import { Education } from 'Organisms/Education';
 import { Icon } from 'Atoms/Icon';
-import { PodcastList } from 'Molecules/PodcastList';
 import { SeoHead } from 'Atoms/SeoHead';
 import { WorkExperience } from 'Organisms/WorkExperience';
 
 interface IProps {
-	podcasts: IPodcast[];
 	jobs: IJob[];
 	education: IEducation[];
 }
 
-const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
+const AboutPage: NextPage<IProps> = ({ jobs, education }) => {
 	return (
 		<AnimatePage>
 			<SeoHead
-				title="About Jacob Yi, a Senior Software Engineer and Consultant in the US"
-				description="As a passionate front-end software developer, I create amazing websites and web apps to make the internet a better place."
+				title="About Jacob Yi, a Senior Full Stack Engineer"
+				description="As a passionate full Stack Engineer, I create amazing websites and web apps to make the internet a better place."
 			/>
 			<Container>
 				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">
 					Hey, I&apos;m Jacob Yi
 				</h1>
 				<h2 className="font-bold text-xl md:text-2xl mt-2">
-					Senior Software Engineer from the UK
+					Senior Full Stack Engineer
 				</h2>
 				<p className="mt-8">
-					As a passionate front-end developer, I create amazing websites and web
-					apps to make the internet a better place. I am an advocate for web
-					performance and accessibility as well as a JAMstack enthusiast with
-					experience in serverless technologies.
+					As a passionate Full Stack developer with background in Physics. Ever
+					since I took a programming lab course, I have been hooked on
+					programming and have been developing software applications. <br /> The
+					courses I took in Physics have definitely taught me to be a critical
+					thinker and a fast learner. I create amazing websites and web apps to
+					make the internet a better place. I am an advocate for web performance
+					and accessibility as well as a JAMstack enthusiast with experience in
+					serverless technologies.
 				</p>
 				<p className="my-4">
-					I am 31 years old and have been a web developer for as long as I can
-					think. The technologies I work with are JavaScript, HTML and CSS with
-					a focus on the frameworks React.js, Gatsby, Next.js, Node and Express.
-					I use code not only to do my day-to-day job, but also to solve
-					everyday problems I come across.
+					I am {new Date().getFullYear() - 1995} years old and have been a web
+					developer for as long as I can think. The technologies I work with are
+					JavaScript, HTML and CSS with a focus on the frameworks React.js,
+					Gatsby, Next.js, Node and Express. I use code not only to do my
+					day-to-day job, but also to solve everyday problems I come across.
 				</p>
-				<p>
-					When I am not writing code I love to spend time with my wife and 3
-					year old daughter at home in London or travelling around the world. We
-					are quite a multi-cultural family with me having grown up in Germany
-					🇩🇪 and my wife being from Mexico 🇲🇽, which is why we raise our
-					daughter trilingual. I myself speak five languages (some better than
-					others). Furthermore I enjoy cooking fresh food when I come home after
-					a long day at the office.
-				</p>
+				<p>I enjoy cooking fresh food.</p>
 				{/* <h2 className="headline mt-12 mb-4 text-4xl">Podcasts I enjoy</h2>
 
 				<PodcastList podcasts={podcasts} /> */}
@@ -97,14 +91,6 @@ export async function getStaticProps() {
 	const { data } = await client.query({
 		query: gql`
 			query AboutPageQuery {
-				podcasts(orderBy: name_ASC) {
-					id
-					name
-					url
-					logo {
-						url
-					}
-				}
 				jobs(orderBy: fromDate_DESC) {
 					id
 					jobTitle
@@ -143,7 +129,6 @@ export async function getStaticProps() {
 
 	return {
 		props: {
-			podcasts: mapPodcasts(data.podcasts),
 			education: mapEducation(data.educations),
 			// podcasts: [],
 			// education: [],

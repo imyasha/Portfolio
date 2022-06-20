@@ -22,8 +22,10 @@ const IndexPage = () => {
 	return (
 		<AnimatePage>
 			<SeoHead
-				title="Senior Software Engineer and Consultant – Jacob Yi"
-				description="A Front-End Software Engineer with a focus on JavaScript and React. I have more than 10 years experience working in software engineering and consulting."
+				title="Senior Software Engineer – Jacob Yi"
+				description={`A Full Stack Engineer with a focus on JavaScript and React. I have more than ${
+					new Date().getFullYear() - 2016
+				} years experience working in software engineering and consulting.`}
 				keywords={[
 					'Software Engineer',
 					'Jacob Yi',
@@ -43,7 +45,7 @@ const IndexPage = () => {
 					Hey, I&apos;m Jacob Yi 👋
 				</h1>
 				<p className="my-8 text-lg">
-					I am a passionate Software Engineer, specialised in front-end
+					I am a passionate Full Stack Engineer, specialised in front-end
 					development using React and TypeScript. As an advocate for web
 					performance and accessibility and an evangelist for the Jamstack, I
 					create amazing web applications to make the internet a better place.
@@ -61,19 +63,6 @@ const IndexPage = () => {
 					/>
 					.
 				</p>
-				{/* <p>
-					P.S. this website is open-source and available on{' '}
-					<a
-						href="https://github.com/jakeherp/portfolio"
-						title="Link to Github repository"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="underlined font-bold relative border-b-2 border-grey-300 dark:border-grey-700 hover:border-b-0"
-					>
-						Github
-					</a>
-					.
-				</p> */}
 			</Container>
 		</AnimatePage>
 	);
