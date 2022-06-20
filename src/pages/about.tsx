@@ -92,7 +92,9 @@ export async function getStaticProps() {
 					jobTitle
 					fromDate
 					toDate
-					description
+					description {
+						raw
+					}
 					company {
 						name
 						url
