@@ -1,10 +1,9 @@
-import { IEducation, IJob, IPodcast } from '@types';
+import { IEducation, IJob } from '@types';
 
 import { client } from 'apollo-client';
 import { gql } from '@apollo/client';
 import { mapEducation } from 'utils/mappings/mapEducation';
 import { mapJobs } from 'utils/mappings/mapJobs';
-import { mapPodcasts } from 'utils/mappings/mapPodcasts';
 import { NextPage } from 'next';
 
 import { AnimatePage } from 'Atoms/AnimatePage';
@@ -52,9 +51,6 @@ const AboutPage: NextPage<IProps> = ({ jobs, education }) => {
 					day-to-day job, but also to solve everyday problems I come across.
 				</p>
 				<p>I enjoy cooking fresh food.</p>
-				{/* <h2 className="headline mt-12 mb-4 text-4xl">Podcasts I enjoy</h2>
-
-				<PodcastList podcasts={podcasts} /> */}
 
 				<h2 className="headline mt-12 mb-4 text-4xl">Experience</h2>
 
@@ -130,8 +126,6 @@ export async function getStaticProps() {
 	return {
 		props: {
 			education: mapEducation(data.educations),
-			// podcasts: [],
-			// education: [],
 			jobs: mapJobs(data.jobs),
 		},
 	};

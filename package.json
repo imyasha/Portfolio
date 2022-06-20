@@ -30,7 +30,6 @@
 		"@apollo/client": "^3.5.10",
 		"@graphcms/rich-text-react-renderer": "^0.5.0",
 		"@mailchimp/mailchimp_marketing": "^3.0.74",
-		"@sentry/nextjs": "^6.19.6",
 		"@svgr/webpack": "6.2.1",
 		"autoprefixer": "^10.4.4",
 		"browserslist": "4.20.2",
