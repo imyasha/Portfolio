@@ -58,9 +58,9 @@ const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 					others). Furthermore I enjoy cooking fresh food when I come home after
 					a long day at the office.
 				</p>
-				<h2 className="headline mt-12 mb-4 text-4xl">Podcasts I enjoy</h2>
+				{/* <h2 className="headline mt-12 mb-4 text-4xl">Podcasts I enjoy</h2>
 
-				<PodcastList podcasts={podcasts} />
+				<PodcastList podcasts={podcasts} /> */}
 
 				<h2 className="headline mt-12 mb-4 text-4xl">Experience</h2>
 
