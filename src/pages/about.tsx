@@ -26,12 +26,12 @@ const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 	return (
 		<AnimatePage>
 			<SeoHead
-				title="About Jacob Herper, a Senior Software Engineer and Consultant in the UK"
+				title="About Jacob Yi, a Senior Software Engineer and Consultant in the US"
 				description="As a passionate front-end software developer, I create amazing websites and web apps to make the internet a better place."
 			/>
 			<Container>
 				<h1 className="headline text-3xl md:text-5xl lg:text-6xl mt-8">
-					Hey, I&apos;m Jacob Herper
+					Hey, I&apos;m Jacob Yi
 				</h1>
 				<h2 className="font-bold text-xl md:text-2xl mt-2">
 					Senior Software Engineer from the UK
@@ -76,7 +76,7 @@ const AboutPage: NextPage<IProps> = ({ podcasts, jobs, education }) => {
 
 				<div className="flex justify-center mt-8">
 					<Button
-						href="/cv-2021.pdf"
+						href="/cv-2022.pdf"
 						download={true}
 						className="group flex gap-2 whitespace-nowrap"
 					>
@@ -97,7 +97,7 @@ export async function getStaticProps() {
 	const { data } = await client.query({
 		query: gql`
 			query AboutPageQuery {
-				podcasts(orderBy: position_ASC) {
+				podcasts(orderBy: name_ASC) {
 					id
 					name
 					url
@@ -110,9 +110,7 @@ export async function getStaticProps() {
 					jobTitle
 					fromDate
 					toDate
-					description {
-						raw
-					}
+					description
 					company {
 						name
 						url
@@ -147,6 +145,8 @@ export async function getStaticProps() {
 		props: {
 			podcasts: mapPodcasts(data.podcasts),
 			education: mapEducation(data.educations),
+			// podcasts: [],
+			// education: [],
 			jobs: mapJobs(data.jobs),
 		},
 	};

@@ -3,9 +3,8 @@
 	"description": "A redesign of my portfolio website.",
 	"version": "3.4.2",
 	"author": {
-		"name": "Jacob Herper",
-		"email": "jacob@herper.io",
-		"url": "https://herper.io/"
+		"name": "Jacob Yi",
+		"email": "jacobyidev@gmail.com"
 	},
 	"license": "MIT",
 	"private": false,

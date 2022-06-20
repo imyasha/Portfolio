@@ -25,6 +25,12 @@
 				"allowSeparatedGroups": true
 			}
 		],
+		"prettier/prettier": [
+			"error",
+			{
+				"endOfLine": "auto",
+			}
+		],
 		"react/display-name": "off",
 		"react/prop-types": "off",
 		"react/react-in-jsx-scope": "off",
