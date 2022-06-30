@@ -22,7 +22,7 @@ MyError.getInitialProps = async (context: NextPageContext) => {
 	const errorInitialProps: AppErrorProps =
 		await NextErrorComponent.getInitialProps(context);
 
-	const { res, err, asPath } = context;
+	const { res, err } = context;
 
 	// Workaround for https://github.com/vercel/next.js/issues/8592, mark when
 	// getInitialProps has run
