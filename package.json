@@ -13,8 +13,8 @@
 		"url": "https://github.com/jakeherp/portfolio"
 	},
 	"engines" : { 
-    "npm" : ">=8.0.0",
-    "node" : ">=17.2.0"
+    "npm" : "8.0.0",
+    "node" : "17.2.0"
   },
 	"scripts": {
 		"dev": "next",
