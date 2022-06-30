@@ -1,4 +1,4 @@
-import { Layout } from '../Layout';
+import { Layout } from './Layout';
 import { render } from '@testing-library/react';
 import { useRouter } from 'next/router';
 

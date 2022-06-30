@@ -22,8 +22,8 @@
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
 		"test:ci": "jest --ci",
-		"test:coverage": "jest --selectProjects test --coverage",
-		"test:watch": "jest --selectProjects test --watch ",
+		"test:coverage": "jest --coverage",
+		"test:watch": "jest --watchAll",
 		"test": "jest"
 	},
 	"dependencies": {
@@ -89,6 +89,7 @@
 		"postcss-preset-env": "^7.4.3",
 		"prettier": "^2.6.2",
 		"react-test-renderer": "^18.0.0",
+		"storybook-addon-next-router": "^4.0.0",
 		"storybook-tailwind-dark-mode": "^1.0.11",
 		"tailwindcss": "^3.0.24",
 		"tsconfig-paths-webpack-plugin": "^3.5.2",
