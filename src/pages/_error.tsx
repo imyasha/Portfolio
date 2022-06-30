@@ -40,10 +40,6 @@ MyError.getInitialProps = async (context: NextPageContext) => {
 		return errorInitialProps;
 	}
 
-	// If this point is reached, getInitialProps was called without any
-	// information about what the error might be. This is unexpected and may
-	// indicate a bug introduced in Next.js, so record it in Sentry
-
 	return errorInitialProps;
 };
 

@@ -1,4 +1,4 @@
-import { Box } from '../Box';
+import { Box } from './';
 import { render } from '@testing-library/react';
 
 describe('Box', () => {
